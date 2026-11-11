@@ -47,7 +47,7 @@ class JsonBookRepository implements IBookRepository {
       .toList();
 
   void _save(List<Map<String, dynamic>> records) {
-    _fileContent = jsonEncode(records);
+    _fileContent = const JsonEncoder.withIndent('  ').convert(records);
   }
 
   static Map<String, dynamic> _toRecord(Book b) => {
