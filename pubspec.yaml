@@ -1,0 +1,7 @@
+name: library_app
+description: Облік книг бібліотеки — Clean Architecture (лабораторна робота №5).
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.3.0
