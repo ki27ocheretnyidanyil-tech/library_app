@@ -50,6 +50,9 @@ class Book {
 
   /// Видати книгу читачу.
   void lend(String borrowerName) {
+    if (!_isAvailable) {
+      throw DomainException('Книга «$title» вже видана читачу $_borrowerName.');
+    }
     if (borrowerName.trim().isEmpty) {
       throw DomainException("Вкажіть ім'я читача.");
     }
