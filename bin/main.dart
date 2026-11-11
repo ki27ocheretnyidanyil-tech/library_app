@@ -17,6 +17,7 @@ void main() {
       ? JsonBookRepository(settings.filePath)
       : InMemoryBookRepository();
 
+  print('Сховище даних: ${settings.storageType}');
 
   // Use cases отримують залежність через конструктор (Dependency Injection)
   final menu = LibraryMenu(
