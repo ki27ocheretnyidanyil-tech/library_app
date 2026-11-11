@@ -8,6 +8,7 @@ class GetAllBooksUseCase {
 
   List<Book> execute() {
     final books = _repository.getAll();
+    books.sort((a, b) => a.title.toLowerCase().compareTo(b.title.toLowerCase()));
     return books;
   }
 }
